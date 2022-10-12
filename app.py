@@ -44,7 +44,7 @@ def handle_404(err):
 
 
 @app.errorhandler(exceptions.InternalServerError)
-def handle_50(err):
+def handle_500(err):
     return jsonify({"message": f"It's not you, it's us {err}"}), 500
 
 
